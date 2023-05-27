@@ -23,22 +23,111 @@
         course</a>
     </p>
 
-    <h2></h2>
+    <h2>Component Lifecycle Methods</h2>
 
     <section>
-      <h3></h3>
+      <h3>The Component Lifecycle</h3>
       <ul>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li>React components go through a lifecycle consisting of three main parts: Mounting, Updating, and Unmounting.
+        </li>
+        <li>Mounting occurs when a component is initialized and added to the DOM for the first time.</li>
+        <li>Updating happens when a component updates due to changes in its state or props.</li>
+        <li>Unmounting takes place when a component is removed from the DOM.</li>
+        <li>Every React component goes through at least the Mounting step to be visible.</li>
+        <li>Components are typically updated when their state changes or when new props are passed to them.</li>
+        <li>Purely static components, like a logo, may not need to update.</li>
+        <li>Unmounting occurs when a component is removed from the DOM, such as when hiding a component or transitioning
+          between screens.</li>
+        <li>Each component instance has its own lifecycle, so multiple instances of a component on a page will have
+          separate lifecycles.</li>
+        <li>Once a component instance is unmounted, it will not be remounted, updated, or unmounted again.</li>
+        <img src="./assets/images/" alt="component lifecycle">
       </ul>
+    </section>
+
+    <section>
+      <h3>Introduction to Lifecycle Methods</h3>
+      <ul>
+        <li>Lifecycle methods in React are special methods that are called at different stages of a component's
+          lifecycle.</li>
+        <li>Two common lifecycle methods are constructor() and render().</li>
+        <li>constructor() is called during the mounting phase and is used for initializing the component's state and
+          binding event handlers.</li>
+        <li>render() is called during both the mounting and updating phases. It is responsible for rendering the
+          component's JSX and returning it for display.</li>
+        <li>Lifecycle methods don't necessarily correspond directly to specific parts of the lifecycle. Some methods may
+          be called multiple times or only once, depending on the phase.</li>
+        <li>These methods allow you, as the programmer, to manage and interact with the component's lifecycle and
+          perform actions at specific stages.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>componentDidMount</h3>
+      <ul>
+        <li>componentDidMount() is a lifecycle method in React that is called after the component has been rendered and
+          added to the DOM.</li>
+        <li>It is part of the mounting phase of the component's lifecycle.</li>
+        <li>The order of execution during the mounting phase is: constructor, render, componentDidMount.</li>
+        <li>componentDidMount() is commonly used to perform initialization tasks and side effects that require access to
+          the DOM or external data.</li>
+        <li>It is a good place to start timers, fetch data from an API, or set up event listeners.</li>
+        <li>Another method called getDerivedStateFromProps() is rarely used.</li>
+        <img src="./assets/images/" alt="componentDidMount example">
+      </ul>
+    </section>
+
+    <section>
+      <h3>componentWillUnmount</h3>
+      <ul>
+        <li>If a component uses a side-effect, such as a setInterval() function, it's important to clean up that
+          side-effect to avoid performance issues and potential bugs.</li>
+        <li>When a component is unmounted (removed from the page), any ongoing side-effects should be stopped to prevent
+          unnecessary JavaScript code from running.</li>
+        <li>React provides the componentWillUnmount() lifecycle method, which is called in the unmounting phase just
+          before the component is destroyed.</li>
+        <li>In componentWillUnmount(), you can perform cleanup tasks for your component's side-effects.</li>
+        <li>To stop a setInterval() function, you can use the clearInterval() function by passing in the ID returned by
+          setInterval().</li>
+        <li> It's important to clean up side-effects to avoid memory leaks, performance degradation, and potential bugs
+          in your application.</li>
+        <img src="./assets/images/" alt="componentWillUnmount example">
+      </ul>
+    </section>
+
+    <section>
+      <h3>componentDidUpdate</h3>
+      <ul>
+        <li>The component lifecycle consists of three parts: mounting, updating, and unmounting.</li>
+        <li>Mounting occurs when the component is initialized and added to the DOM for the first time.</li>
+        <li>Updating happens when the component's state or props change.</li>
+        <li>Unmounting occurs when the component is removed from the DOM.</li>
+        <li>Updates are triggered by changes in props or state.</li>
+        <li>The render() method is called during an update to re-render the component.</li>
+        <li>The componentDidUpdate() method is another important method that is called after the component updates.</li>
+        <li>componentDidUpdate() is a good place to perform update-phase tasks or work.</li>
+        <li>It provides an opportunity to respond to changes in props or state and update the component accordingly.
+        </li>
+        <li>By implementing componentDidUpdate(), you can handle specific logic or side-effects that need to occur after
+          an update.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>Review: Component Lifecycle Methods</h3>
+      <ul>
+        <li>Mounting, when the component is being initialized and put into the DOM for the first time. We saw that the
+          constructor, render(), and componentDidMount() are called during this phase.</li>
+        <li>Updating, when the component updates as a result of changed state or changed props. We saw that render() and
+          componentDidUpdate() are called during this phase.</li>
+        <li>Unmounting, when the component is being removed from the DOM. We saw that componentWillUnmount() was called
+          here, which was a good time to clean things up.</li>
+        <li>We also learned about setting up side-effects and tearing them down. We now know how to make more robust,
+          complex components!</li>
+      </ul>
+      <p><a
+          href="https://www.codecademy.com/learn/learn-react-lifecycle-methods/modules/learn-react-lifecycle-methods/cheatsheet">Codecademy
+          - Lifecycle Methods Cheatsheet</a></p>
     </section>
 
   </main>

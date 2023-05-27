@@ -33,7 +33,7 @@ This is a collection of all my notes taken whilst going through the Codecademy c
 
 ## Useful Resources
 
-...
+[React Docs - State & Lifecycle](https://legacy.reactjs.org/docs/state-and-lifecycle.html)
 
 <br>
 
