@@ -1,6 +1,6 @@
 <h1 align="center">My Notes - Codecademy Learn React: Lifecycle Methods | NickOD.xyz</h1>
 
-![Certificate of Completion]()
+![Certificate of Completion](./assets/images/Codecademy%20-%20Learn%20React%20Lifecycle%20Methods.jpg)
 
 <br>
 
@@ -14,13 +14,7 @@ This is a collection of all my notes taken whilst going through the Codecademy c
 
 ## Link to Live Site of Notes
 
-[Site Coming Soon]()
-
-<br>
-
-## Sticking Points & What I learned
-
-...
+[My Notes](https://nick-odonoghue.github.io/codecademy-Learn-react-lifecycle-methods/)
 
 <br>
 
